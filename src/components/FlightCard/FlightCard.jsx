@@ -7,24 +7,24 @@ function FlightCard({ data }) {
   return data.map((content) => (
     <div className="card flightCardWrapper">
       <div className="flightId">
-        <span>{content.name}</span>
+        <strong>{content.name}</strong>
         <span>{content.flightNo}</span>
       </div>
       <div className="flightDuration">
         <div className="departure">
-          <span>{content.departureTime}</span>
-          <span>{content.origin}</span>
+          <strong>{content.departureTime}</strong>
+          <strong>{content.origin}</strong>
         </div>
         <div className="arrival">
-          <span>{content.arrivalTime}</span>
-          <span>{content.destination}</span>
+          <strong>{content.arrivalTime}</strong>
+          <strong>{content.destination}</strong>
         </div>
         <div className="totalDuration">
           <span>Total duration</span>
         </div>
       </div>
       <div className="payment">
-        <span>₹ {content.price}</span>
+        <strong>₹ {content.price}</strong>
         <CustomButton>Book</CustomButton>
       </div>
     </div>
