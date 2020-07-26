@@ -5,15 +5,23 @@ import CustomButton from "../Button/CustomButton";
 function FlightCard({ data }) {
   console.log(data);
   return data.map((content) => (
-    <div className="flightCardWrapper">
-      <span>{content.name}</span>
+    <div className="card flightCardWrapper">
+      <div className="flightId">
+        <span>{content.name}</span>
+        <span>{content.flightNo}</span>
+      </div>
       <div className="flightDuration">
-        <span>{content.arrivalTime}</span>
-        <span>{content.departureTime}</span>
-        <span>Total</span>
+        <div className="departure">
+          <span>{content.departureTime}</span>
+          <span>{content.origin}</span>
+        </div>
+        <div className="arrival">
+          <span>{content.arrivalTime}</span>
+          <span>{content.destination}</span>
+        </div>
       </div>
       <div className="payment">
-        <span>{content.price}</span>
+        <span>₹ {content.price}</span>
         <CustomButton>Book</CustomButton>
       </div>
     </div>
