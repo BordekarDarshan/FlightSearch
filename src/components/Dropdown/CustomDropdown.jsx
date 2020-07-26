@@ -2,14 +2,16 @@ import React from "react";
 import "./CustomDropdown.css";
 import { Dropdown, DropdownButton } from "react-bootstrap";
 
-function CustomDropdown({ title }) {
+function CustomDropdown({ title, selectCity }) {
   return (
     <div className="customDropdownWrapper">
-      <DropdownButton title={title}>
-        <Dropdown.Item>Pune (PNQ)</Dropdown.Item>
-        <Dropdown.Item>Mumbai (BOM)</Dropdown.Item>
-        <Dropdown.Item>Bengaluru (BLR)</Dropdown.Item>
-        <Dropdown.Item>Delhi (DEL)</Dropdown.Item>
+      <DropdownButton title={title} onSelect={selectCity}>
+        <Dropdown.Item eventKey="Pune (PNQ)">Pune (PNQ)</Dropdown.Item>
+        <Dropdown.Item eventKey="Mumbai (BOM)">Mumbai (BOM)</Dropdown.Item>
+        <Dropdown.Item eventKey="Bengaluru (BLR)">
+          Bengaluru (BLR)
+        </Dropdown.Item>
+        <Dropdown.Item eventKey="Delhi (DEL)">Delhi (DEL)</Dropdown.Item>
       </DropdownButton>
     </div>
   );

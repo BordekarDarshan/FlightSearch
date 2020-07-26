@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import BookFlight from "../../components/BookFlight/BookFlight";
 import { fetchFlightDataThunk } from "../../Redux/Action";
 import Sidebar from "../../components/Sidebar/Sidebar";
@@ -7,17 +7,24 @@ import { connect, useSelector } from "react-redux";
 import "./Home.css";
 
 function Home({ dispatch }) {
+  const [value, setValue] = useState("");
+
   useEffect(() => {
     dispatch(fetchFlightDataThunk());
   }, [dispatch]);
 
   const counter = useSelector((state) => state.FlightData);
 
+  const handleSelect = (e) => {
+    console.log(e);
+    setValue(e);
+  };
+
   return (
     <>
       <Header />
       <div className="container-fluid appWrapper">
-        <Sidebar data={counter} />
+        <Sidebar data={counter} selectCity={handleSelect} />
         <BookFlight data={counter} />
       </div>
     </>
