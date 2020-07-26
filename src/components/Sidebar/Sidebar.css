@@ -22,3 +22,16 @@
   margin: 2% 0 2% 0;
   border: none;
 }
+
+.sideImage {
+  width: 12em;
+  position: -webkit-sticky;
+  position: sticky;
+  bottom: 0.5rem;
+  margin-top: auto;
+}
+
+.sideImage > img {
+  width: 100%;
+  transform: rotate(-10deg);
+}

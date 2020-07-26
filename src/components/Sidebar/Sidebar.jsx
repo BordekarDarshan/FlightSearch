@@ -14,6 +14,9 @@ function Sidebar() {
         <CustomDropdown title="Origin City"></CustomDropdown>
         <CustomDropdown title="Destination City"></CustomDropdown>
       </div>
+      <div className="sideImage">
+        <img alt="plane" src="https://i.ibb.co/0Y70z2y/blue-plane.png"></img>
+      </div>
     </div>
   );
 }
