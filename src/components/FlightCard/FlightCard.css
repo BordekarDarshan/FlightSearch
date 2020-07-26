@@ -32,3 +32,17 @@
   display: flex;
   justify-content: space-between;
 }
+
+@media screen and (max-width: 900px) {
+  .flightCardWrapper {
+    width: 25rem;
+    display: flex;
+    flex-direction: column !important;
+  }
+  .flightId,
+  .flightDuration,
+  .payment {
+    width: 100%;
+    margin: 2% 0 2% 0;
+  }
+}

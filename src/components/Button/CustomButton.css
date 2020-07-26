@@ -1,4 +1,8 @@
 .btnTab {
   width: 6em;
-  max-height: 2em;
+}
+
+.btn {
+  font-weight: lighter !important;
+  padding: 3px 0 !important;
 }
