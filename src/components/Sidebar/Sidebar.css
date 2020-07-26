@@ -2,7 +2,8 @@
   flex-flow: column;
   margin-top: 2vh;
   display: flex;
-  width: 13em;
+  min-width: 13em;
+  order: 1;
 }
 
 .tabWrapper {

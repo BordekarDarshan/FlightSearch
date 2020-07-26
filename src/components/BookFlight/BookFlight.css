@@ -1,0 +1,7 @@
+.bookFlightWrapper {
+  flex-flow: column;
+  display: flex;
+  width: 96%;
+  margin: 2%;
+  order: 2;
+}

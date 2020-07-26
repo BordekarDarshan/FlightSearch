@@ -1,7 +1,7 @@
 import React from "react";
-import "./Button.css";
+import "./CustomButton.css";
 
-function Button({ children, ...other }) {
+function CustomButton({ children, ...other }) {
   return (
     <div className="btn btn-primary btnTab" {...other}>
       {children}
@@ -9,4 +9,4 @@ function Button({ children, ...other }) {
   );
 }
 
-export default Button;
+export default CustomButton;

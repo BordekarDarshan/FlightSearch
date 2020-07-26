@@ -9,14 +9,14 @@ import "./Home.css";
 function Home({ dispatch }) {
   useEffect(() => {
     dispatch(fetchFlightDataThunk());
-  }, []);
+  }, [dispatch]);
 
   const counter = useSelector((state) => state.FlightData);
-
+  console.log(counter);
   return (
     <>
       <Header />
-      <div className="container-fluid">
+      <div className="container-fluid appWrapper">
         <Sidebar />
         <BookFlight />
       </div>

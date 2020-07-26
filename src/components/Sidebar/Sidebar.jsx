@@ -1,14 +1,14 @@
 import React from "react";
 import "./Sidebar.css";
 import { Dropdown, DropdownButton } from "react-bootstrap";
-import Button from "../Button/Button";
+import CustomButton from "../Button/CustomButton";
 
 function Sidebar() {
   return (
     <div className="sidebarWrapper">
       <div className="tabWrapper">
-        <Button>One Way</Button>
-        <Button>Return</Button>
+        <CustomButton>One Way</CustomButton>
+        <CustomButton>Return</CustomButton>
       </div>
       <div className="inputWrapper">
         <DropdownButton title="Origin City">
