@@ -2,7 +2,7 @@ import React from "react";
 import FlightCard from "../FlightCard/FlightCard";
 import "./BookFlight.css";
 
-function BookFlight() {
+function BookFlight({ data }) {
   return (
     <div className="bookFlightWrapper">
       <div className="selectedFlight">
@@ -10,7 +10,7 @@ function BookFlight() {
         <span className="flightResult">Result</span>
       </div>
       <div className="flightScheduleWrapper">
-        <FlightCard></FlightCard>
+        <FlightCard data={data}></FlightCard>
       </div>
     </div>
   );

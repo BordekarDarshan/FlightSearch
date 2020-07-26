@@ -12,13 +12,13 @@ function Home({ dispatch }) {
   }, [dispatch]);
 
   const counter = useSelector((state) => state.FlightData);
-  console.log(counter);
+
   return (
     <>
       <Header />
       <div className="container-fluid appWrapper">
-        <Sidebar />
-        <BookFlight />
+        <Sidebar data={counter} />
+        <BookFlight data={counter} />
       </div>
     </>
   );

@@ -1,5 +1,9 @@
 .flightCardWrapper {
   display: flex;
-
   justify-content: space-between;
+}
+
+.payment {
+  display: flex;
+  justify-content: space-evenly;
 }
