@@ -1,35 +1,27 @@
-import React, { Component } from "react";
-import "./Home.css";
-import { connect } from "react-redux";
-import Sidebar from "../../components/Sidebar/Sidebar";
-import { fetchFlightDataThunk } from "../../Redux/Action";
+import React, { useEffect } from "react";
 import BookFlight from "../../components/BookFlight/BookFlight";
+import { fetchFlightDataThunk } from "../../Redux/Action";
+import Sidebar from "../../components/Sidebar/Sidebar";
 import Header from "../../components/Header/Header";
+import { connect, useSelector } from "react-redux";
+import "./Home.css";
 
-export class Home extends Component {
-  componentDidMount() {
-    this.props.flightData();
-  }
+function Home({ dispatch }) {
+  useEffect(() => {
+    dispatch(fetchFlightDataThunk());
+  }, []);
 
-  render() {
-    return (
-      <>
-        <Header />
-        <div className="container-fluid">
-          <Sidebar />
-          <BookFlight />
-        </div>
-      </>
-    );
-  }
+  const counter = useSelector((state) => state.FlightData);
+
+  return (
+    <>
+      <Header />
+      <div className="container-fluid">
+        <Sidebar />
+        <BookFlight />
+      </div>
+    </>
+  );
 }
 
-const mapStateToProps = (state) => ({
-  flightContent: state.FlightData,
-});
-
-const mapDispatchToProps = (dispatch) => ({
-  flightData: () => dispatch(fetchFlightDataThunk()),
-});
-
-export default connect(mapStateToProps, mapDispatchToProps)(Home);
+export default connect()(Home);
