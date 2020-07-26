@@ -7,7 +7,8 @@ import { connect, useSelector } from "react-redux";
 import "./Home.css";
 
 function Home({ dispatch }) {
-  const [value, setValue] = useState("");
+  const [originValue, setOriginValue] = useState("");
+  const [destinationValue, setDestinationValue] = useState("");
 
   useEffect(() => {
     dispatch(fetchFlightDataThunk());
@@ -15,16 +16,25 @@ function Home({ dispatch }) {
 
   const counter = useSelector((state) => state.FlightData);
 
-  const handleSelect = (e) => {
+  const originSelect = (e) => {
     console.log(e);
-    setValue(e);
+    setOriginValue(e);
   };
 
+  const destinationSelect = (e) => {
+    console.log(e);
+    setDestinationValue(e);
+  };
+  console.log("origin", originValue, "dest", destinationValue);
   return (
     <>
       <Header />
       <div className="container-fluid appWrapper">
-        <Sidebar data={counter} selectCity={handleSelect} />
+        <Sidebar
+          data={counter}
+          selectOrigin={originSelect}
+          selectDestination={destinationSelect}
+        />
         <BookFlight data={counter} />
       </div>
     </>

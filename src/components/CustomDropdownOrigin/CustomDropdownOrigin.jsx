@@ -1,11 +1,10 @@
 import React from "react";
-import "./CustomDropdown.css";
 import { Dropdown, DropdownButton } from "react-bootstrap";
 
-function CustomDropdown({ title, selectCity }) {
+function CustomDropdownOrigin({ title, selectOrigin }) {
   return (
     <div className="customDropdownWrapper">
-      <DropdownButton title={title} onSelect={selectCity}>
+      <DropdownButton title={title} onSelect={selectOrigin}>
         <Dropdown.Item eventKey="Pune (PNQ)">Pune (PNQ)</Dropdown.Item>
         <Dropdown.Item eventKey="Mumbai (BOM)">Mumbai (BOM)</Dropdown.Item>
         <Dropdown.Item eventKey="Bengaluru (BLR)">
@@ -17,4 +16,4 @@ function CustomDropdown({ title, selectCity }) {
   );
 }
 
-export default CustomDropdown;
+export default CustomDropdownOrigin;
