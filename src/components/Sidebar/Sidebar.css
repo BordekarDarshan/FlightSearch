@@ -1,0 +1,23 @@
+.sidebarWrapper {
+  flex-flow: column;
+  margin-top: 2vh;
+  display: flex;
+  width: 13em;
+}
+
+.tabWrapper {
+  justify-content: space-between;
+  display: flex;
+  flex-flow: row;
+}
+
+.inputWrapper {
+  margin: 5% 0 5% 0;
+}
+
+.dropdown > button {
+  box-shadow: none !important;
+  width: 10em !important;
+  margin: 2% 0 2% 0;
+  border: none;
+}

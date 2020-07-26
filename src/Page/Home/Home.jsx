@@ -1,9 +1,10 @@
 import React, { Component } from "react";
+import "./Home.css";
 import { connect } from "react-redux";
-import BookFlight from "../../components/BookFlight/BookFlight";
 import Sidebar from "../../components/Sidebar/Sidebar";
 import { fetchFlightDataThunk } from "../../Redux/Action";
-import "./Home.css";
+import BookFlight from "../../components/BookFlight/BookFlight";
+import Header from "../../components/Header/Header";
 
 export class Home extends Component {
   componentDidMount() {
@@ -12,10 +13,13 @@ export class Home extends Component {
 
   render() {
     return (
-      <div className="container-fluid">
-        <Sidebar />
-        <BookFlight />
-      </div>
+      <>
+        <Header />
+        <div className="container-fluid">
+          <Sidebar />
+          <BookFlight />
+        </div>
+      </>
     );
   }
 }

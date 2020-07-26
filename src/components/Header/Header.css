@@ -1,0 +1,12 @@
+.headerWrapper {
+  height: 7vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.headerWrapper > span {
+  font-size: x-large;
+  font-weight: lighter;
+  padding-left: 2vh;
+}
