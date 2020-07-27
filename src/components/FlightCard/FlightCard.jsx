@@ -3,6 +3,7 @@ import "./FlightCard.css";
 import CustomButton from "../Button/CustomButton";
 
 function FlightCard({ data }) {
+  console.log(data);
   return data.map((content) => (
     <div className="card flightCardWrapper">
       <div className="flightId">

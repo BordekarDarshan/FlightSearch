@@ -11,7 +11,7 @@ export function filterFlight(origin, destination, data, slide) {
     let MultiAirline = searchMultiAirline(origin, destination, data);
 
     if (MultiAirline && filteredData) {
-      return [...MultiAirline, ...filteredData];
+      return [MultiAirline, ...filteredData];
     } else {
       return filteredData;
     }
