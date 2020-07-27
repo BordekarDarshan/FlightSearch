@@ -35,3 +35,18 @@
   width: 100%;
   transform: rotate(-10deg);
 }
+
+.sliderWrapper {
+  display: flex;
+  flex-flow: column;
+  margin: 2% 0 2% 0;
+}
+
+.sliderWrapper > input {
+  width: 90% !important;
+}
+
+.sliderWrapper > span {
+  font-size: x-large;
+  font-weight: lighter;
+}
