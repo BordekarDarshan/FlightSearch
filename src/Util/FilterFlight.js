@@ -1,7 +1,11 @@
+import { filterFilghtByUser } from "./filterFlightByUser";
+import { searchMultiAirline } from "./searchMultiAirline";
+import { samePlaceSelection } from "./samePlaceSelection";
+
 export function filterFlight(origin, destination, data) {
   if (origin === destination) {
-    let originalData = sameFlightSelection(data);
-    return originalData;
+    let samePlace = samePlaceSelection();
+    return samePlace;
   } else {
     let filteredData = filterFilghtByUser(origin, destination, data);
     let MultiAirline = searchMultiAirline(origin, destination, data);
@@ -13,27 +17,3 @@ export function filterFlight(origin, destination, data) {
     }
   }
 }
-
-const filterFilghtByUser = (origin, destination, data) => {
-  let filteredData = data.filter(
-    (content) =>
-      content.origin === origin && content.destination === destination
-  );
-  return filteredData;
-};
-
-const sameFlightSelection = (data) => {
-  return data;
-};
-
-const searchMultiAirline = (origin, destination, data) => {
-  let originData = data.filter((data) => data.origin === origin);
-  let destinationData = data.filter((data) => data.destination === destination);
-  for (const origin of originData) {
-    for (const destination of destinationData) {
-      if (origin.destination === destination.origin) {
-        return [origin, destination];
-      }
-    }
-  }
-};
