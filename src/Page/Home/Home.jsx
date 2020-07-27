@@ -10,6 +10,11 @@ function Home({ dispatch }) {
   const [originValue, setOriginValue] = useState("");
   const [destinationValue, setDestinationValue] = useState("");
   const [oneWay, setOneWay] = useState(true);
+  const [slide, setSlide] = useState(10000);
+
+  const handleChange = (event) => {
+    setSlide(event.target.value);
+  };
 
   useEffect(() => {
     dispatch(fetchFlightDataThunk());
@@ -43,18 +48,22 @@ function Home({ dispatch }) {
           selectDestination={destinationSelect}
           switchOneWay={switchOneWay}
           switchReturn={switchReturn}
+          slide={slide}
+          handleChange={handleChange}
         />
         {oneWay ? (
           <BookFlight
             data={counter}
             origin={originValue}
             destination={destinationValue}
+            slide={slide}
           />
         ) : (
           <BookFlight
             data={counter}
             origin={destinationValue}
             destination={originValue}
+            slide={slide}
           />
         )}
       </div>

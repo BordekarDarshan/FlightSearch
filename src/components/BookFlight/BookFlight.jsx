@@ -3,8 +3,8 @@ import FlightCard from "../FlightCard/FlightCard";
 import { filterFlight } from "../../Util/FilterFlight";
 import "./BookFlight.css";
 
-function BookFlight({ data, origin, destination }) {
-  let filteredData = filterFlight(origin, destination, data);
+function BookFlight({ data, origin, destination, slide }) {
+  let filteredData = filterFlight(origin, destination, data, slide);
 
   return (
     <div className="bookFlightWrapper">
