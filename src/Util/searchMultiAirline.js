@@ -5,8 +5,9 @@ export const searchMultiAirline = (origin, destination, data) => {
   for (const origin of originData) {
     for (const destination of destinationData) {
       if (origin.destination === destination.origin) {
-        let finalPrice = calculatePrice(origin, destination);
+        const finalPrice = calculatePrice(origin, destination);
         let refinedContent = {
+          id: 1,
           multiple: [origin, destination],
           name: "Multiple",
           TotalDuration: "",
