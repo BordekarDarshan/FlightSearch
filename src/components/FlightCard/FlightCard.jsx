@@ -19,9 +19,6 @@ function FlightCard({ data }) {
           <strong>{content.arrivalTime}</strong>
           <strong>{content.destination}</strong>
         </div>
-        <div className="totalDuration">
-          <span>Total duration</span>
-        </div>
       </div>
       <div className="payment">
         <strong>₹ {content.price}</strong>
