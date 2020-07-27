@@ -6,6 +6,15 @@
   order: 2;
 }
 
+.selectedFlight {
+  display: flex;
+  flex-flow: column;
+}
+
+.flightName {
+  font-weight: bold;
+}
+
 @media screen and (max-width: 968px) {
   .flightScheduleWrapper {
     display: flex;
