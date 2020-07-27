@@ -4,12 +4,17 @@ import CustomButton from "../Button/CustomButton";
 import CustomDropdownOrigin from "../CustomDropdownOrigin/CustomDropdownOrigin";
 import CustomDropdownDestination from "../CustomDropdownDestination/CustomDropdownDestination";
 
-function Sidebar({ selectOrigin, selectDestination }) {
+function Sidebar({
+  selectOrigin,
+  selectDestination,
+  switchOneWay,
+  switchReturn,
+}) {
   return (
     <div className="sidebarWrapper">
       <div className="tabWrapper">
-        <CustomButton>One Way</CustomButton>
-        <CustomButton>Return</CustomButton>
+        <CustomButton onClick={switchOneWay}>One Way</CustomButton>
+        <CustomButton onClick={switchReturn}>Return</CustomButton>
       </div>
       <div className="inputWrapper">
         <CustomDropdownOrigin

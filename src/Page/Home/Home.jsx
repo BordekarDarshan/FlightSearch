@@ -9,6 +9,7 @@ import "./Home.css";
 function Home({ dispatch }) {
   const [originValue, setOriginValue] = useState("");
   const [destinationValue, setDestinationValue] = useState("");
+  const [oneWay, setOneWay] = useState(true);
 
   useEffect(() => {
     dispatch(fetchFlightDataThunk());
@@ -24,6 +25,14 @@ function Home({ dispatch }) {
     setDestinationValue(e);
   };
 
+  const switchOneWay = () => {
+    setOneWay(true);
+  };
+
+  const switchReturn = () => {
+    setOneWay(false);
+  };
+
   return (
     <>
       <Header />
@@ -32,12 +41,22 @@ function Home({ dispatch }) {
           data={counter}
           selectOrigin={originSelect}
           selectDestination={destinationSelect}
+          switchOneWay={switchOneWay}
+          switchReturn={switchReturn}
         />
-        <BookFlight
-          data={counter}
-          origin={originValue}
-          destination={destinationValue}
-        />
+        {oneWay ? (
+          <BookFlight
+            data={counter}
+            origin={originValue}
+            destination={destinationValue}
+          />
+        ) : (
+          <BookFlight
+            data={counter}
+            origin={destinationValue}
+            destination={originValue}
+          />
+        )}
       </div>
     </>
   );
