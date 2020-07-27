@@ -17,15 +17,13 @@ function Home({ dispatch }) {
   const counter = useSelector((state) => state.FlightData);
 
   const originSelect = (e) => {
-    console.log(e);
     setOriginValue(e);
   };
 
   const destinationSelect = (e) => {
-    console.log(e);
     setDestinationValue(e);
   };
-  console.log("origin", originValue, "dest", destinationValue);
+
   return (
     <>
       <Header />
