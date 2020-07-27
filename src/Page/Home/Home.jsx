@@ -35,7 +35,11 @@ function Home({ dispatch }) {
           selectOrigin={originSelect}
           selectDestination={destinationSelect}
         />
-        <BookFlight data={counter} />
+        <BookFlight
+          data={counter}
+          origin={originValue}
+          destination={destinationValue}
+        />
       </div>
     </>
   );
