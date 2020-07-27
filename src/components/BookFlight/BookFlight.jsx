@@ -2,9 +2,12 @@ import React from "react";
 import FlightCard from "../FlightCard/FlightCard";
 import { filterFlight } from "../../Util/FilterFlight";
 import "./BookFlight.css";
+import MultilineFlightCard from "../MultilineFlightCard/MultilineFlightCard";
+import { searchMultiAirline } from "../../Util/searchMultiAirline";
 
 function BookFlight({ data, origin, destination, slide }) {
   let filteredData = filterFlight(origin, destination, data, slide);
+  let mutilineData = searchMultiAirline(origin, destination, data);
 
   return (
     <div className="bookFlightWrapper">
@@ -20,6 +23,9 @@ function BookFlight({ data, origin, destination, slide }) {
       </div>
       <div className="flightScheduleWrapper">
         <FlightCard data={filteredData}></FlightCard>
+        {mutilineData && (
+          <MultilineFlightCard multiline={mutilineData}></MultilineFlightCard>
+        )}
       </div>
     </div>
   );
