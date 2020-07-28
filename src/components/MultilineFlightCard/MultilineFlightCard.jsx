@@ -1,4 +1,14 @@
 import React from "react";
+import {
+  MutilineFlightStyle,
+  FlightIdStyle,
+  FlightDurationStyle,
+  DepartureStyle,
+  ArrivalStyle,
+  TimeSpanStyle,
+  PaymentStyle,
+  AccordianStyle,
+} from "./MultilineFlightCard.Style";
 import "./MultilineFlightCard.css";
 import CustomButton from "../Button/CustomButton";
 import { Accordion, Button } from "react-bootstrap";
@@ -6,59 +16,59 @@ import FlightDuration from "../FlightDuration/FlightDuration";
 
 function MultilineFlightCard({ multiline }) {
   return (
-    <Accordion>
-      <div className="card mutilineFlightCardWrapper">
-        <div className="mutilineFlightId">
+    <AccordianStyle>
+      <MutilineFlightStyle className="card">
+        <FlightIdStyle>
           <strong>{multiline.name}</strong>
           <Accordion.Toggle as={Button} variant="success" eventKey="0">
             Details
           </Accordion.Toggle>
-        </div>
-        <div className="mutilineFlightDuration">
-          <div className="mutilineDeparture">
+        </FlightIdStyle>
+        <FlightDurationStyle>
+          <DepartureStyle>
             <strong>{multiline.departureTime}</strong>
             <strong>{multiline.origin}</strong>
-          </div>
-          <div className="mutilineArrival">
+          </DepartureStyle>
+          <ArrivalStyle>
             <strong>{multiline.arrivalTime}</strong>
             <strong>{multiline.destination}</strong>
-          </div>
-        </div>
-        <div className="mutilinePayment">
+          </ArrivalStyle>
+        </FlightDurationStyle>
+        <PaymentStyle>
           <strong>₹ {multiline.price}</strong>
           <CustomButton>Book</CustomButton>
-        </div>
-      </div>
+        </PaymentStyle>
+      </MutilineFlightStyle>
       <Accordion.Collapse eventKey="0">
         <>
           {multiline.multiple.map((data) => (
-            <div className="card mutilineFlightCardWrapper">
-              <div className="mutilineFlightId">
+            <MutilineFlightStyle className="card">
+              <FlightIdStyle>
                 <strong>{data.name}</strong>
                 <span>{data.flightNo}</span>
-              </div>
-              <div className="mutilineFlightDuration">
-                <div className="mutilineDeparture">
+              </FlightIdStyle>
+              <FlightDurationStyle>
+                <DepartureStyle>
                   <strong>{data.departureTime}</strong>
                   <strong>{data.origin}</strong>
-                </div>
-                <div className="mutilineArrival">
+                </DepartureStyle>
+                <ArrivalStyle>
                   <strong>{data.arrivalTime}</strong>
                   <strong>{data.destination}</strong>
-                </div>
-                <div className="mutilineTimeSpan">
+                </ArrivalStyle>
+                <TimeSpanStyle>
                   <FlightDuration a={data.arrivalTime} b={data.departureTime} />
                   <span>Non stop</span>
-                </div>
-              </div>
-              <div className="mutilinePayment">
+                </TimeSpanStyle>
+              </FlightDurationStyle>
+              <PaymentStyle>
                 <strong>₹ {data.price}</strong>
-              </div>
-            </div>
+              </PaymentStyle>
+            </MutilineFlightStyle>
           ))}
         </>
       </Accordion.Collapse>
-    </Accordion>
+    </AccordianStyle>
   );
 }
 
