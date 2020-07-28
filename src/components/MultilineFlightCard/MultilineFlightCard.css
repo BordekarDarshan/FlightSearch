@@ -35,6 +35,10 @@
   align-items: center;
 }
 
+.mutilineFlightId > button {
+  width: 6em;
+}
+
 @media screen and (max-width: 968px) {
   .mutilineFlightCardWrapper {
     width: 25rem;
