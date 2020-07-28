@@ -4,13 +4,12 @@ import { fetchFlightDataThunk } from "../../Redux/Action";
 import Sidebar from "../../components/Sidebar/Sidebar";
 import Header from "../../components/Header/Header";
 import { connect, useSelector } from "react-redux";
-import "./Home.css";
 
 function Home({ dispatch }) {
-  const [originValue, setOriginValue] = useState("");
-  const [destinationValue, setDestinationValue] = useState("");
+  const [originValue, setOriginValue] = useState("Origin City");
+  const [destinationValue, setDestinationValue] = useState("Destination City");
   const [oneWay, setOneWay] = useState(true);
-  const [slide, setSlide] = useState(10000);
+  const [slide, setSlide] = useState(20000);
 
   const handleChange = (event) => {
     setSlide(event.target.value);
@@ -41,7 +40,7 @@ function Home({ dispatch }) {
   return (
     <>
       <Header />
-      <div className="container-fluid appWrapper">
+      <div className="container-fluid appWrapper" style={{ display: "flex" }}>
         <Sidebar
           data={counter}
           selectOrigin={originSelect}
@@ -50,6 +49,8 @@ function Home({ dispatch }) {
           switchReturn={switchReturn}
           slide={slide}
           handleChange={handleChange}
+          originValue={originValue}
+          destinationValue={destinationValue}
         />
         {oneWay ? (
           <BookFlight

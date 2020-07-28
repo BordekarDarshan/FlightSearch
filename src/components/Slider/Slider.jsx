@@ -7,7 +7,7 @@ function Slider({ slide, handleChange }) {
       <input
         type="range"
         min="0"
-        max="10000"
+        max="20000"
         value={slide}
         onChange={handleChange}
         step="1"

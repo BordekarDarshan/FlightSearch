@@ -12,6 +12,8 @@ function Sidebar({
   switchReturn,
   slide,
   handleChange,
+  originValue,
+  destinationValue,
 }) {
   return (
     <div className="sidebarWrapper">
@@ -21,12 +23,12 @@ function Sidebar({
       </div>
       <div className="inputWrapper">
         <CustomDropdownOrigin
-          title="Origin City"
           selectOrigin={selectOrigin}
+          originValue={originValue}
         ></CustomDropdownOrigin>
         <CustomDropdownDestination
-          title="Destination City"
           selectDestination={selectDestination}
+          destinationValue={destinationValue}
         ></CustomDropdownDestination>
       </div>
       <div className="sliderWrapper">
