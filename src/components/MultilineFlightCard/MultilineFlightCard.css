@@ -66,11 +66,10 @@
   .accordion {
     display: flex;
     flex-flow: column;
-    width: 100%;
+    width: 96%;
   }
   .mutilineFlightCardWrapper {
-    display: flex;
-    width: 96%;
+    width: 100%;
   }
   .collapse {
     display: flex;
