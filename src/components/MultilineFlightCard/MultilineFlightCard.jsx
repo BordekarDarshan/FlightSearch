@@ -9,7 +9,6 @@ import {
   PaymentStyle,
   AccordianStyle,
 } from "./MultilineFlightCard.Style";
-import "./MultilineFlightCard.css";
 import CustomButton from "../Button/CustomButton";
 import { Accordion, Button } from "react-bootstrap";
 import FlightDuration from "../FlightDuration/FlightDuration";
