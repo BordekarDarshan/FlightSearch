@@ -62,3 +62,19 @@
     justify-content: space-between;
   }
 }
+@media screen and (max-width: 668px) {
+  .accordion {
+    display: flex;
+    flex-flow: column;
+    width: 100%;
+  }
+  .mutilineFlightCardWrapper {
+    display: flex;
+    width: 96%;
+  }
+  .collapse {
+    display: flex;
+    flex-flow: column;
+    width: 100%;
+  }
+}

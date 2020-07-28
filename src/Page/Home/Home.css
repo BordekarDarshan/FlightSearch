@@ -1,0 +1,10 @@
+.appWrapper {
+  display: flex;
+}
+
+@media screen and (max-width: 668px) {
+  .appWrapper {
+    display: flex;
+    flex-flow: column;
+  }
+}

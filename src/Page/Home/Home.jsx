@@ -4,6 +4,7 @@ import { fetchFlightDataThunk } from "../../Redux/Action";
 import Sidebar from "../../components/Sidebar/Sidebar";
 import Header from "../../components/Header/Header";
 import { connect, useSelector } from "react-redux";
+import "./Home.css";
 
 function Home({ dispatch }) {
   const [originValue, setOriginValue] = useState("Origin City");
@@ -40,7 +41,7 @@ function Home({ dispatch }) {
   return (
     <>
       <Header />
-      <div className="container-fluid appWrapper" style={{ display: "flex" }}>
+      <div className="container-fluid appWrapper">
         <Sidebar
           data={counter}
           selectOrigin={originSelect}

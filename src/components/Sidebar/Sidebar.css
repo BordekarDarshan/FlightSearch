@@ -50,3 +50,16 @@
   font-size: x-large;
   font-weight: lighter;
 }
+
+@media screen and (max-width: 668px) {
+  .sliderWrapper > input {
+    width: 50% !important;
+  }
+
+  .sideImage > img {
+    display: none;
+  }
+  .tabWrapper {
+    justify-content: flex-start;
+  }
+}
