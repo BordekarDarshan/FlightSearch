@@ -20,11 +20,12 @@ function FlightCard({ data }) {
           <strong>{content.arrivalTime}</strong>
           <strong>{content.destination}</strong>
         </div>
-        <div>
+        <div className="timeSpan">
           <FlightDuration
             a={content.arrivalTime}
             b={content.departureTime}
           ></FlightDuration>
+          <span>Non Stop</span>
         </div>
       </div>
       <div className="payment">

@@ -20,7 +20,8 @@
 }
 
 .mutilineDeparture,
-.mutilineArrival {
+.mutilineArrival,
+.mutilineTimeSpan {
   display: flex;
   flex-flow: column;
   justify-content: center;

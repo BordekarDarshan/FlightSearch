@@ -2,6 +2,7 @@ import React from "react";
 import "./MultilineFlightCard.css";
 import CustomButton from "../Button/CustomButton";
 import { Accordion, Button } from "react-bootstrap";
+import FlightDuration from "../FlightDuration/FlightDuration";
 
 function MultilineFlightCard({ multiline }) {
   return (
@@ -21,6 +22,13 @@ function MultilineFlightCard({ multiline }) {
           <div className="mutilineArrival">
             <strong>{multiline.arrivalTime}</strong>
             <strong>{multiline.destination}</strong>
+          </div>
+          <div className="mutilineTimeSpan">
+            <FlightDuration
+              a={multiline.arrivalTime}
+              b={multiline.departureTime}
+            />
+            <span>Total Duration</span>
           </div>
         </div>
         <div className="mutilinePayment">
