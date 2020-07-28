@@ -18,11 +18,7 @@ function BookFlight({ data, origin, destination, slide }) {
           </span>
         )}
         <span className="flightResult">
-          {multiline ? (
-            <strong>{filteredData.length + multiline.id} Flights Found </strong>
-          ) : (
-            <strong>{filteredData.length} Flights Found </strong>
-          )}
+          <strong>{filteredData.length} Flights Found </strong>
         </span>
       </div>
       <div className="flightScheduleWrapper">
