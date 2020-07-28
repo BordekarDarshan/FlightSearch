@@ -8,8 +8,8 @@ function MultilineFlightCard({ multiline }) {
     <Accordion>
       <div className="card mutilineFlightCardWrapper">
         <div className="mutilineFlightId">
-          <strong>{multiline.name}</strong>
-          <Accordion.Toggle as={Button} variant="link" eventKey="0">
+          <strong className="mb-1">{multiline.name}</strong>
+          <Accordion.Toggle as={Button} variant="success" eventKey="0">
             Details
           </Accordion.Toggle>
         </div>
@@ -34,6 +34,7 @@ function MultilineFlightCard({ multiline }) {
             <div className="card mutilineFlightCardWrapper">
               <div className="mutilineFlightId">
                 <strong>{data.name}</strong>
+                <span>{data.flightNo}</span>
               </div>
               <div className="mutilineFlightDuration">
                 <div className="mutilineDeparture">
@@ -47,7 +48,6 @@ function MultilineFlightCard({ multiline }) {
               </div>
               <div className="mutilinePayment">
                 <strong>₹ {data.price}</strong>
-                <CustomButton>Book</CustomButton>
               </div>
             </div>
           ))}
