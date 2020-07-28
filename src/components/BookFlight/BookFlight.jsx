@@ -7,7 +7,7 @@ import "./BookFlight.css";
 
 function BookFlight({ data, origin, destination, slide }) {
   let filteredData = filterFlight(origin, destination, data, slide);
-  let multiline = searchMultiAirline(origin, destination, data, slide);
+  let multiline = searchMultiAirline(origin, destination, data);
 
   return (
     <div className="bookFlightWrapper">
@@ -27,7 +27,7 @@ function BookFlight({ data, origin, destination, slide }) {
       </div>
       <div className="flightScheduleWrapper">
         <FlightCard data={filteredData}></FlightCard>
-        {multiline && (
+        {multiline && multiline.price < slide && (
           <MultilineFlightCard multiline={multiline}></MultilineFlightCard>
         )}
       </div>
