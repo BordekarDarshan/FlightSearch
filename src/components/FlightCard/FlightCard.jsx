@@ -1,8 +1,10 @@
 import React from "react";
 import "./FlightCard.css";
 import CustomButton from "../Button/CustomButton";
+import FlightDuration from "../FlightDuration/FlightDuration";
 
 function FlightCard({ data }) {
+  console.log(data);
   return data.map((content) => (
     <div className="card flightCardWrapper">
       <div className="flightId">
@@ -17,6 +19,12 @@ function FlightCard({ data }) {
         <div className="arrival">
           <strong>{content.arrivalTime}</strong>
           <strong>{content.destination}</strong>
+        </div>
+        <div>
+          <FlightDuration
+            a={content.arrivalTime}
+            b={content.departureTime}
+          ></FlightDuration>
         </div>
       </div>
       <div className="payment">
