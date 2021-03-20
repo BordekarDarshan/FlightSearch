@@ -84,3 +84,10 @@ export const AccordianStyle = styled(Accordion)`
     width: 96%;
   }
 `;
+
+export const Slide = styled.span`
+  margin-top: 10px;
+  @media screen and (max-width: 468px) {
+    font-size: medium;
+  }
+`;

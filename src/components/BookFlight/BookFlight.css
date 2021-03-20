@@ -13,6 +13,7 @@
 
 .flightName {
   font-weight: bold;
+  color: #6b8ac7;
 }
 
 @media screen and (max-width: 968px) {

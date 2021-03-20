@@ -1,9 +1,13 @@
 import React from "react";
+import { Slide } from "../MultilineFlightCard/MultilineFlightCard.Style";
 
 function Slider({ slide, handleChange }) {
+  let strongStyle = {
+    marginBottom: "10px",
+  };
   return (
     <>
-      <strong>Price</strong>
+      <strong style={strongStyle}>Price</strong>
       <input
         type="range"
         min="0"
@@ -12,7 +16,7 @@ function Slider({ slide, handleChange }) {
         onChange={handleChange}
         step="1"
       ></input>
-      <span>{slide}</span>
+      <Slide>{slide}</Slide>
     </>
   );
 }

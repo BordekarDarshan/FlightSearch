@@ -7,3 +7,13 @@
   padding: 3px 0 !important;
   margin: 1px;
 }
+
+.btn-primary {
+  background-color: #4265ae !important;
+  border-color: #4265ae !important;
+}
+
+.btn-primary:hover {
+  background-color: #5979c0 !important;
+  border-color: #5979c0 !important;
+}
