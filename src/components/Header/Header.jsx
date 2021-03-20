@@ -4,7 +4,7 @@ import "./Header.css";
 function Header() {
   return (
     <div className="headerWrapper">
-      <span>Flight Search App</span>
+      <span>Flight Search</span>
     </div>
   );
 }
